@@ -1,0 +1,142 @@
+/* start global rules  */
+/* start global rules */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'poppins', sans-serif;
+  background-color: #2196f3;
+  overflow: hidden;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* end global rules  */
+/* start landing */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: skewY(345deg);
+  z-index: -1;
+}
+.container .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+}
+@media (max-width: 991px) {
+  .container .image {
+    display: none;
+  }
+}
+.container .image img {
+  position: relative;
+  max-width: 100%;
+  animation: up-and-down 5s linear infinite;
+}
+.container .login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  margin-left: -200px;
+}
+@media (max-width: 991px) {
+  .container .login-form {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+  }
+}
+.container .login-form .content {
+  text-align: center;
+}
+.container .content img {
+  height: 100px;
+  border-radius: 50%;
+}
+.container .content h2 {
+  letter-spacing: -1px;
+  font-size: 35px;
+  margin: 30px 0;
+}
+.container .login-form .input {
+  display: block;
+  width: 300px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: #f9f9f9;
+  border-radius: 50px;
+  outline-color: #2196f3;
+}
+.container .login-form [type='password'] {
+  -webkit-text-security: disc !important;
+}
+.container .login-form a {
+  display: block;
+  margin-bottom: 20px;
+  text-align: end;
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+  font-size: 14px;
+}
+.container .login-form [type='submit'] {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+/* end landing */
+/* start animations */
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}
+/* end animations */
